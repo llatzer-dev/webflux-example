@@ -78,13 +78,13 @@ curl http://localhost:8080/api/usuarios/99
 
 ```bash
 # Create
+curl -X POST http://localhost:8080/api/usuarios -H "Content-Type: application/json" -d "{\"id\":\"4\",\"nombre\":\"Ana\",\"email\":\"ana@example.com\"}"
+
+# Read
 curl http://localhost:8080/api/usuarios
 
 # Read
 curl http://localhost:8080/api/usuarios/1
-
-# Update
-curl -X POST http://localhost:8080/api/usuarios -H "Content-Type: application/json" -d "{\"id\":\"4\",\"nombre\":\"Ana\",\"email\":\"ana@example.com\"}"
 
 # Update
 curl -X PUT http://localhost:8080/api/usuarios/1 -H "Content-Type: application/json" -d "{\"id\":\"1\",\"nombre\":\"Lázaro Actualizado\",\"email\":\"lazaro.new@example.com\"}"
